@@ -1,0 +1,20 @@
+﻿@model List<DemoStudentData.Models.User>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@foreach (var item in Model)
+{
+    @item.Id
+    @item.Name
+    <br>
+    @item.Malayalam
+    <br />
+    @item.English
+    <br />
+    @item.Maths
+    <br />
+}
+
+
