@@ -18,13 +18,14 @@
 }*@
 
 <div>
-    <table id="t01">
+    <table id="t01" align="center">
         <thead>
             <th>User Id</th>
             <th>Name</th>
             <th>Malayalam</th>
             <th>English</th>
             <th>Maths</th>
+            <th>Total</th>
 
 
         </thead>
@@ -46,12 +47,16 @@
                 <td>
                     @item.Maths
                 </td>
+                <td>
+                    @(item.Malayalam + item.English + item.Maths)
+                </td>
             </tr>
         }
 
     </table>
 </div>
 <style>
+    
     table#t01 {
         width: 50%;
         background-color: #f1f1c1;
@@ -59,10 +64,12 @@
 
         table#t01 tr:nth-child(even) {
             background-color: #eee;
+            text-align: center;
         }
 
         table#t01 tr:nth-child(odd) {
             background-color: #fff;
+            text-align:center;
         }
 
         table#t01 th {
