@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@*<h2>Index</h2>
 @foreach (var item in Model)
 {
     @item.Id
@@ -15,6 +15,76 @@
     <br />
     @item.Maths
     <br />
-}
+}*@
+
+<div>
+    <table id="t01">
+        <thead>
+            <th>User Id</th>
+            <th>Name</th>
+            <th>Malayalam</th>
+            <th>English</th>
+            <th>Maths</th>
 
 
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Malayalam
+                </td>
+                <td>
+                    @item.English
+                </td>
+                <td>
+                    @item.Maths
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<style>
+    table#t01 {
+        width: 50%;
+        background-color: #f1f1c1;
+    }
+
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        table#t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        table#t01 th {
+            color: white;
+            background-color: blue;
+        }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+</style>
